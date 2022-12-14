@@ -1,0 +1,10 @@
+drop table dependente;
+drop table empregado;
+drop table tabela1 ;
+drop table tabela2 ;
+drop table tabela3 ;
+drop table tabela4 ;
+drop table tabela5 ;
+drop table tabela6 ;
+drop table tabela7 ;
+drop table tabela8 ;
