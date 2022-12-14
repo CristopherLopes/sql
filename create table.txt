@@ -1,0 +1,24 @@
+create table Empregado (
+    MatEmp smallint not null,
+    NomEmp char (30) not null,
+    EndEmp char (80) null,
+    CidEmp char (20) null,
+    constraint PK_EMP primary key (MatEmp)
+)
+/*constraint, restrição*/
+/*pk de Empregado
+  @MatEmp PK */
+create table Dependente (
+    NomeDep char (30),
+    DatNasc date,
+    MatEmp smallint,
+    constraint PK_DEP primary key (MatEmp, NomeDep),
+    constraint FK_EMP_DEP foreign key (MatEmp) references Empregado (MatEmp)
+);
+/*pk de Dependente será composta MatEmp, NomeDep
+  @MatEmp PK e FK
+  @NomeDep PK*/
+
+/* Devido as restrições a tabela Dependente deve ser apagada primeiro
+drop table Dependente
+drop table Empregado*/
