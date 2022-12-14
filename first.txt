@@ -1,0 +1,15 @@
+/*criar tabela*/
+create table aluno (
+    matricula int,
+    nome varchar(30),
+    constraint pk_matricula PRIMARY KEY (matricula)
+
+);
+/*inserir dados*/
+insert into aluno (matricula, nome) values (7, 'Lopes');
+
+/*selecionar dados*/
+select * from aluno;
+
+/*deletar tabela*/
+drop table aluno;
