@@ -1,0 +1,3 @@
+Column Name,Data Type,Nullable,Default,Primary Key
+MATRICULA,NUMBER,No,,1
+NOME,VARCHAR2(30),Yes,,
