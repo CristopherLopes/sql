@@ -1,0 +1,32 @@
+drop table dependente
+drop table dados
+
+create table dados(
+    d1 char(30) null,
+    d2 char(30) null
+);
+insert into dados (d1, d2)
+values ('Lopes', 'Cristopher');
+
+insert into Empregado (matemp, nomemp, endemp, cidemp)
+values (7, 'Lopes','SPSP','SP');
+
+create table Empregado (
+    MatEmp smallint not null,
+    NomEmp char (30) not null,
+    EndEmp char (80) null,
+    CidEmp char (20) null,
+    constraint PK_EMP primary key (MatEmp)
+)
+/*constraint, restrição*/
+/*pk de Empregado
+  @MatEmp PK */
+create table Dependente (
+    NomeDep char (30),
+    DatNasc date,
+    MatEmp smallint,
+    constraint PK_DEP primary key (MatEmp, NomeDep),
+    constraint FK_EMP_DEP foreign key (MatEmp) references Empregado (MatEmp)
+);
+
+select * from empregado;
